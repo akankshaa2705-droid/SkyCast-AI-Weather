@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SkyCast — AI Weather</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Animated atmosphere -->
+<div class="atmosphere">
+    <div class="cloud cloud-one"></div>
+    <div class="cloud cloud-two"></div>
+    <div class="cloud cloud-three"></div>
+</div>
+
+<main class="app">
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="topbar">
+
+        <div class="brand">
+            <span class="brand-icon">✦</span>
+            <span>SkyCast</span>
+        </div>
+
+        <form id="search-form" class="search">
+
+            <input
+                    id="city-input"
+                    type="text"
+                    placeholder="Search any city..."
+                    autocomplete="off"
+                    required
+            >
+
+            <button type="submit">
+                SEARCH
+            </button>
+
+        </form>
+
+    </header>
+
+
+    <!-- ================= WEATHER ================= -->
+
+    <section class="weather-card">
+
+        <div class="weather-info">
+
+            <p class="eyebrow" id="date">
+                YOUR LOCAL WEATHER
+            </p>
+
+            <h1 id="city">
+                Search for a city
+            </h1>
+
+            <p id="description">
+                Live weather at a glance
+            </p>
+
+            <div class="temperature">
+                <span id="temperature">--</span>
+                <span class="degrees">°C</span>
+            </div>
+
+            <p id="feels-like">
+                Feels like --°C
+            </p>
+
+        </div>
+
+
+        <div
+                class="weather-icon"
+                id="weather-icon"
+        >
+            ☁
+        </div>
+
+
+        <div class="details">
+
+            <div class="detail-item">
+                <span>HUMIDITY</span>
+                <strong id="humidity">--%</strong>
+            </div>
+
+            <div class="detail-item">
+                <span>WIND</span>
+                <strong id="wind">-- m/s</strong>
+            </div>
+
+            <div class="detail-item">
+                <span>PRESSURE</span>
+                <strong id="pressure">-- hPa</strong>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <p
+            id="message"
+            class="message"
+            role="status"
+    ></p>
+
+
+    <!-- ================= AI CHAT ================= -->
+
+    <section class="ai-chat">
+
+        <div class="ai-chat-header">
+
+            <div>
+
+                <span class="ai-badge">
+                    AI ONLINE
+                </span>
+
+                <h2>
+                    SkyCast AI
+                </h2>
+
+                <p>
+                    Your intelligent weather companion
+                </p>
+
+            </div>
+
+
+            <div class="ai-status">
+                <span></span>
+                ONLINE
+            </div>
+
+        </div>
+
+
+        <div
+                id="chat-messages"
+                class="chat-messages"
+        >
+
+            <div class="ai-message">
+
+                <span class="ai-avatar">
+                    ✦
+                </span>
+
+                <div>
+                    Hey! I'm SkyCast AI.
+                    Ask me about temperature,
+                    rain, wind, humidity or today's weather.
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <form
+                id="chat-form"
+                class="chat-input-area"
+        >
+
+            <input
+                    id="chat-input"
+                    type="text"
+                    placeholder="Ask SkyCast AI..."
+                    autocomplete="off"
+                    required
+            >
+
+            <button type="submit">
+                SEND ✦
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- ================= GLOBAL NEWS ================= -->
+
+    <section class="news-section">
+
+        <div class="news-topline">
+
+            <span class="live-dot"></span>
+
+            <span>
+                LIVE GLOBAL FEED
+            </span>
+
+        </div>
+
+
+        <div class="section-header">
+
+            <div>
+
+                <h2>
+                    GLOBAL WEATHER NEWS
+                </h2>
+
+                <p>
+                    Significant atmospheric events happening around the planet.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="news-slider">
+
+            <div
+                    id="newsContainer"
+                    class="news-container"
+            ></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <span>
+            SKYCAST
+        </span>
+
+        <span>
+            Weather data powered by OpenWeather
+        </span>
+
+    </footer>
+
+</main>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
